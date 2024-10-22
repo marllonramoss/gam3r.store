@@ -40,10 +40,33 @@
 #### **DB:**
 - [Postgresql](https://www.postgresql.org)
 
+#### **Infrastructure:**
+- [AWS EC2](https://aws.amazon.com/ec2)
+- [AWS RDS](https://aws.amazon.com/rds)
+
 </br>
 
 ### 🧑🏻‍💻 Sobre
   4 apps em um monorepo(turborepo): frontend, backend, mobile e core contendo o nucleo da app.
+
+### 🚀 Deployment
+
+Este projeto está atualmente hospedado na **AWS** utilizando o plano **Free Tier**, com a seguinte configuração:
+
+#### **Frontend & Backend:**
+- Hospedado em uma instância **EC2**, utilizando as máquinas mais básicas e elegíveis para o Free Tier (como `t2.micro` ou `t3.micro`).
+- O frontend foi implementado com **Next.js** e o backend com **NestJS**, ambos rodando na mesma instância EC2.
+
+#### **Banco de Dados:**
+- O banco de dados foi configurado utilizando o serviço **RDS** da AWS, com um banco **PostgreSQL**.
+- A instância do banco também está rodando sob o Free Tier (`db.t2.micro`), que oferece até 750 horas de uso gratuito por mês.
+
+#### **Serviços Utilizados:**
+- **EC2 (Elastic Compute Cloud):** Para hospedar tanto o frontend quanto o backend.
+- **RDS (Relational Database Service):** Para o banco de dados PostgreSQL.
+- **AWS Free Tier:** Todos os recursos foram configurados utilizando as opções elegíveis para o plano gratuito da AWS, garantindo que não haja cobranças adicionais enquanto estiver dentro dos limites do Free Tier.
+
+
 
 
 
