@@ -1,46 +1,30 @@
 import { Produto } from '@gstore/core';
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { PrismaProvider } from 'src/db/prisma.provider';
 
 @Injectable()
 export class ProdutoPrisma {
-	constructor(readonly prisma: PrismaProvider) {}
+  constructor(readonly prisma: PrismaProvider) {}
 
-	async salvar(produto: Produto): Promise<void> {
-		await this.prisma.produto.upsert({
-			where: { id: produto.id ?? -1 },
-			update: produto,
-			create: produto,
-		});
-	}
+  async salvar(produto: Produto): Promise<void> {
+    await this.prisma.produto.upsert({
+      where: { id: produto.id ?? -1 },
+      update: produto,
+      create: produto,
+    });
+  }
 
-	async obter(): Promise<Produto[]> {
-		const produtos = await this.prisma.produto.findMany({});
-		return produtos as any;
-	}
+  async obter(): Promise<Produto[]> {
+    const produtos = await this.prisma.produto.findMany();
+    return produtos as any;
+  }
 
-	async obterPorId(id: number): Promise<Produto | null> {
-		const produto = await this.prisma.produto.findUnique({
-			where: { id },
-		});
-		return (produto as any) ?? null;
-	}
+  async obterPorId(id: number): Promise<Produto | null> {
+    const produto = await this.prisma.produto.findUnique({ where: { id } });
+    return (produto as any) ?? null;
+  }
 
-	async excluir(id: number): Promise<{ message: string }> {
-		const produto = await this.prisma.produto.findUnique({
-			where: { id },
-		});
-		if (!produto) {
-			throw new NotFoundException(`Produto com id ${id} não encontrado`);
-		}
-
-		const nomeProduto = produto.nome;
-		await this.prisma.produto.delete({
-			where: { id },
-		});
-
-		return {
-			message: `Produto " ${nomeProduto} " excluído com sucesso`,
-		};
-	}
+  async excluir(id: number): Promise<void> {
+    await this.prisma.produto.delete({ where: { id } });
+  }
 }

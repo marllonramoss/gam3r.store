@@ -1,23 +1,16 @@
-import Pagina from "@/components/template/Pagina";
-import { ProvedorCarrinho } from "@/data/contexts/ContextoCarrinho";
-import { ProvedorPagamento } from "@/data/contexts/ContextoPagamento";
-import { ProvedorProdutos } from "@/data/contexts/ContextoProdutos";
-import React, { ReactNode } from "react";
+import Pagina from '@/components/template/Pagina'
+import { ProvedorCarrinho } from '@/data/contexts/ContextoCarrinho'
+import { ProvedorPagamento } from '@/data/contexts/ContextoPagamento'
+import { ProvedorProdutos } from '@/data/contexts/ContextoProdutos'
 
-interface layoutProps {
-	children: ReactNode;
+export default function Layout(props: any) {
+    return (
+        <ProvedorProdutos>
+            <ProvedorCarrinho>
+                <ProvedorPagamento>
+                    <Pagina>{props.children}</Pagina>
+                </ProvedorPagamento>
+            </ProvedorCarrinho>
+        </ProvedorProdutos>
+    )
 }
-
-const layout = ({ children }: layoutProps) => {
-	return (
-		<ProvedorProdutos>
-			<ProvedorCarrinho>
-				<ProvedorPagamento>
-					<Pagina>{children}</Pagina>;
-				</ProvedorPagamento>
-			</ProvedorCarrinho>
-		</ProvedorProdutos>
-	);
-};
-
-export default layout;

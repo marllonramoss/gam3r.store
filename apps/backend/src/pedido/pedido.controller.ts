@@ -4,25 +4,25 @@ import { Pedido } from '@gstore/core';
 
 @Controller('pedidos')
 export class PedidoController {
-	constructor(private readonly repo: PedidoPrisma) {}
+  constructor(private readonly repo: PedidoPrisma) {}
 
-	@Post()
-	async salvar(@Body() pedido: Pedido) {
-		return this.repo.salvar(pedido);
-	}
+  @Post()
+  async salvar(@Body() pedido: Pedido) {
+    return this.repo.salvar(pedido);
+  }
 
-	@Get()
-	async obterPedidos() {
-		return this.repo.obter();
-	}
+  @Get()
+  async obterPedidos() {
+    return this.repo.obter();
+  }
 
-	@Get(':id')
-	async obterPedidoPorId(@Param('id') id: string) {
-		return this.repo.obterPorId(+id);
-	}
+  @Get(':id')
+  async obterPedidoPorId(@Param('id') id: string) {
+    return this.repo.obterPorId(+id);
+  }
 
-	@Delete(':id')
-	async excluirPedido(@Param('id') id: string) {
-		return this.repo.excluir(+id);
-	}
+  @Delete(':id')
+  async excluirPedido(@Param('id') id: string) {
+    return this.repo.excluir(+id);
+  }
 }

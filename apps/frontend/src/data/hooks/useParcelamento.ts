@@ -1,13 +1,6 @@
-import { CalcularParcelamento } from "@gstore/core";
+import { CalcularParcelamento } from '@gstore/core'
 
-export default function useParcelamento(
-	valor: number,
-	qtdeParcelas: number = 12,
-) {
-	const parcelamento = new CalcularParcelamento().executar(
-		valor,
-		qtdeParcelas,
-	);
-
-	return parcelamento;
+export default function useParcelamento(valor: number, quantidade: number = 12) {
+    const parcelamento = new CalcularParcelamento().executar(valor, quantidade)
+    return parcelamento
 }

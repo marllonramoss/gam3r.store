@@ -1,12 +1,13 @@
-GET http://localhost:4000/produtos/20
+GET http://localhost:3005/produtos
 
 ###
-
-GET http://localhost:4000/produtos
+GET http://localhost:3005/produtos/30
 
 ###
+DELETE http://localhost:3005/produtos/29
 
-POST http://localhost:4000/produtos
+###
+POST http://localhost:3005/produtos
 Content-Type: application/json
 
 {
@@ -31,8 +32,3 @@ Content-Type: application/json
         "Bateria": "4000 mAh"
     }
 }
-
-###
-
-DELETE http://localhost:4000/produtos/49
-

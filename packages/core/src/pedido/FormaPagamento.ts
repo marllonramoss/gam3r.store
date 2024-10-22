@@ -1,5 +1,5 @@
 export enum FormaPagamento {
-	PIX = "PIX",
-	BOLETO = "BOLETO",
-	CARTAO = "CARTAO",
+    PIX = 'PIX',
+    BOLETO = 'BOLETO',
+    CARTAO = 'CARTAO',
 }

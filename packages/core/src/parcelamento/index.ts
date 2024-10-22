@@ -1,5 +1,5 @@
-import Parcelamento from "./Parcelamento";
-import CalcularParcelamento from "./CalcularParcelamento";
+import CalcularParcelamento from './CalcularParcelamento'
+import Parcelamento from './Parcelamento'
 
-export type { Parcelamento };
-export { CalcularParcelamento };
+export { CalcularParcelamento }
+export type { Parcelamento }
