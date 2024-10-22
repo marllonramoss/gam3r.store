@@ -33,6 +33,7 @@
 
 #### **Backend:**
 - [NestJS](https://nestjs.com)
+- [Prisma](https://www.prisma.io)
 - [Node.js](https://nodejs.org/en/)
 - [TypeScript](https://www.typescriptlang.org/)
 
