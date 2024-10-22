@@ -49,6 +49,15 @@
 ### 🧑🏻‍💻 Sobre
   4 apps em um monorepo(turborepo): frontend, backend, mobile e core contendo o nucleo da app.
 
+### 📄 Rodar localmente
+1. Clone o repo
+2.  Add .env no frontend contendo a url de conexao com o backend.
+    - .env.sample: NEXT_PUBLIC_API_URL=http://localhost:3005
+3.  Add .env no backend contendo a url de conexao com o db
+    - .env.sample: DATABASE_URL= postgresql://user:password@localhost:5432/gam3r.store?schema=public
+4. Rodar dentro da pasta backend: npx prisma generate
+5. Executar projeto: No root da pasta: yarn dev
+
 ### 🚀 Deployment
 
 Este projeto está atualmente hospedado na **AWS** utilizando o plano **Free Tier**, com a seguinte configuração:
