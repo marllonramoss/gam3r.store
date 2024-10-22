@@ -9,10 +9,10 @@
 
   <div style="display: flex; align-items: flex-start;">
   <span>
-    <img src="https://github.com/user-attachments/assets/cee5de16-b1cf-4303-ab4f-f72a80018653" alt="1022(1)" style="width: 700px; height: auto;" />
+    <img src="https://github.com/user-attachments/assets/cee5de16-b1cf-4303-ab4f-f72a80018653" alt="1022(1)" style="width: 600px; height: auto;" />
   </span>
   <span>
-    <img src="https://github.com/user-attachments/assets/e91bec3b-9850-46b7-ac81-e4d686056584" alt="1022(2)" style="width: 222px; height: auto;" />
+    <img src="https://github.com/user-attachments/assets/e91bec3b-9850-46b7-ac81-e4d686056584" alt="1022(2)" style="width: 191px; height: auto;" />
   </span>
 </div>
   
